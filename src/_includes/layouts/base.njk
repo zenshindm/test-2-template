@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+	{% include "components/head.njk" %}
+	<body>
+
+		<header>
+			{% include "components/nav.njk" %}
+		</header>
+
+		<main class="container mx-auto">
+			{{ layoutContent | safe }}
+		</main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>

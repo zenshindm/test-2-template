@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@tailwind utilities;
+
+@layer base {
+    [x-cloak] { 
+        display: none !important; 
+    }
+    .z-container {
+        max-width: 90%;
+    }
+    .lazsect {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 200px;
+    }
+    .burgerline {
+        width: 35px;
+        height: 5px;
+        background-color: #858585;
+        margin: 6px 0;
+    }
+
+    h2 {
+        @apply text-4xl	font-bold pb-5;
+    }
+    
+    p {
+        @apply text-gray-750 pb-3;
+    }
+
+    .content p {
+        @apply pb-5;
+    }
+
+    strong {
+        @apply text-black font-bold;
+    }
+
+    .content ul {
+        @apply text-gray-750 list-disc list-inside;
+    }
+
+    .content li {
+        @apply text-gray-750;
+    }
+
+    .content a {
+        @apply underline underline-offset-1 ease-in-out duration-300 hover:text-blue-650;
+    }
+
+    .content img {
+        @apply w-full pb-5 h-48 lg:h-98 object-cover object-center overflow-hidden;
+    }
+
+    @media (min-width: 1280px) { 
+        .z-container {
+            max-width: 1170px;
+        }
+    }
+}
+
+@layer components {
+    .btn-primary {
+      @apply px-2.5 md:px-5 h-10 ease-in-out duration-300 uppercase text-white text-xs font-bold bg-blue-650 border-solid border-2 rounded-sm border-blue-650 hover:bg-white hover:text-blue-650;
+    }
+    .btn-sec {
+        @apply w-40	px-2.5 md:px-5 h-10 uppercase text-blue-650 text-xs text-center font-bold border-solid border-2 rounded-sm border-blue-650;
+    }
+    /* navbar section */
+    .navarchor {
+        @apply uppercase ease-in-out duration-300 text-2xl md:text-[14px] font-bold hover:text-blue-650;
+    }
+    .navdropdown {
+        @apply py-2 px-4 block text-xs font-bold uppercase hover:text-blue-650;
+    }
+    .navmaindropdown {
+        @apply z-40	 transition ease-in-out opacity-0 -translate-y-6 absolute invisible pt-1 bg-white group-hover:visible group-hover:opacity-100 group-hover:-translate-y-0 duration-150;
+    }
+
+    /* herosection */
+    .slideheroimage {
+        @apply block object-cover overflow-hidden w-full h-screen z-0;
+    }
+    .slideoverlay {
+        @apply absolute w-full h-full z-10 inset-0 bg-blue-750/80;
+    }
+    .slideheroinner {
+        @apply absolute z-container top-10 md:top-1/3 left-0 right-0 mx-auto;
+    }
+    .slideherotitle {
+        @apply text-45xl text-white text-center font-bold leading-snug;
+    }
+    .slideheropara {
+        @apply text-white text-center text-lg pt-5 pb-10 max-w-4xl left-0 right-0 mx-auto;
+    }
+    .slideherocta {
+        @apply flex justify-center;
+    }
+
+    /* servicesection */
+    .colindi {
+        @apply h-44;
+    }
+    .colindiimg {
+        @apply h-16;
+    }
+    .colinditext {
+        @apply text-white ease-in-out duration-300 hover:text-blue-650;
+    }
+
+    /* team section */
+    .teamcol {
+        @apply w-60 h-60 relative;
+    }
+    .teamimg {
+        @apply z-0 w-full object-cover relative;
+    }
+    .teambgtext {
+        @apply z-10 w-full absolute bottom-0;
+    }
+    .teambginnertext {
+        @apply w-full py-2.5 bg-gradient-to-r from-blue-750 to-blue-850 opacity-85;
+    }
+    .teamheadtext {
+        @apply text-white text-center font-bold text-lg;
+    }
+    .teambottext {
+        @apply text-white text-center text-sm;
+    }
+
+    /* testimon section */
+    .courmain {
+        @apply flex flex-col space-y-8 md:flex-row md:space-x-8;
+    }
+    .tesImg {
+        @apply rounded-full w-44 h-44;
+    }
+    .tesRight {
+        @apply flex flex-col space-y-8 justify-center;
+    }
+    .tesHead {
+        @apply text-white;
+    }
+    .tesText {
+        @apply text-white;
+    }
+
+    /* gallery section */
+    .galleryimg {
+        @apply w-full object-cover object-center;
+    }
+    
+}
